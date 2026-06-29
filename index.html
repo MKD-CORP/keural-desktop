@@ -173,7 +173,10 @@
     </div>
 
     <p class="notes">
-      macOS는 최초 실행 시 <b>시스템 설정 → 개인정보 보호 및 보안</b>에서 실행 허용이 필요할 수 있어요.<br/>
+      macOS에서 <b>"손상되었기 때문에 열 수 없습니다"</b>가 뜨면, 앱을 응용 프로그램 폴더로 옮긴 뒤 터미널에서
+      <code style="background:rgba(135,77,255,0.1);padding:1px 6px;border-radius:5px;">xattr -cr /Applications/Keural.app</code>
+      를 한 번 실행하세요 (서명 전이라 생기는 격리 속성 제거).<br/>
+      또는 최초 실행 시 <b>시스템 설정 → 개인정보 보호 및 보안</b>에서 실행 허용이 필요할 수 있어요.<br/>
       이전 버전이나 전체 릴리스 목록은 <a href="https://github.com/MKD-CORP/keural-desktop/releases" target="_blank" rel="noopener">GitHub Releases</a>에서 확인하세요.
     </p>
 
