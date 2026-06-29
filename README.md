@@ -11,13 +11,13 @@
 
 <br/>
 
-### [⬇️  지금 다운로드](https://mkd-corp.github.io/keural-desktop/)
+### [⬇️  지금 다운로드](https://github.com/MKD-CORP/keural-desktop/releases/latest)
 
 <sub>macOS · Windows · Linux</sub>
 
 <br/>
 
-[![Download](https://img.shields.io/badge/⬇_Download-874dff?style=for-the-badge)](https://mkd-corp.github.io/keural-desktop/)
+[![Download](https://img.shields.io/badge/⬇_Download-874dff?style=for-the-badge)](https://github.com/MKD-CORP/keural-desktop/releases/latest)
 [![Latest Release](https://img.shields.io/github/v/release/MKD-CORP/keural-desktop?style=for-the-badge&color=3382ff&label=latest)](https://github.com/MKD-CORP/keural-desktop/releases/latest)
 
 </div>
@@ -37,7 +37,7 @@
 
 ## 다운로드
 
-운영체제를 자동으로 감지하는 **[다운로드 페이지](https://mkd-corp.github.io/keural-desktop/)** 를 권장합니다.
+최신 버전은 **[GitHub Releases](https://github.com/MKD-CORP/keural-desktop/releases/latest)** 에서 받을 수 있습니다. 아래 표에서 플랫폼별 파일을 바로 받아도 됩니다.
 
 | 플랫폼 | 아키텍처 | 직접 다운로드 |
 |---|---|---|
