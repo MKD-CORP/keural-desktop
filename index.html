@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Keural Desktop 다운로드</title>
+<meta name="description" content="큐럴 데스크톱 앱 — 내 컴퓨터의 로컬 파일을 AI로 직접 분석하세요. macOS · Windows · Linux." />
+<meta property="og:title" content="Keural Desktop 다운로드" />
+<meta property="og:description" content="큐럴 데스크톱 앱 — 로컬 파일을 AI로 직접 분석." />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 420 420'%3E%3Cpath fill='%23874dff' d='M341 0a79 79 0 0 1 21 154c-98 33-175 110-208 208a79 79 0 1 1-98-98 471 471 0 0 0 94-49c2-2 5-4 5-6s-1-4-4-6a268 268 0 0 0-99-50A79 79 0 1 1 154 57a321 321 0 0 0 46 89c4 5 7 5 12 5 3 0 7-4 9-7a318 318 0 0 0 45-90C277 23 306 0 341 0Z'/%3E%3C/svg%3E" />
+<style>
+  :root {
+    --grad: linear-gradient(135deg, #b847ff 0%, #874dff 45%, #3382ff 100%);
+    --ink: #1a1d23;
+    --muted: #687481;
+    --line: #e8ecf5;
+    --card: #ffffff;
+    --bg: #f7f8fc;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { height: 100%; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Pretendard", "Segoe UI", Roboto, sans-serif;
+    color: var(--ink);
+    background:
+      radial-gradient(1200px 600px at 50% -10%, rgba(135, 77, 255, 0.14), transparent 60%),
+      radial-gradient(900px 500px at 90% 10%, rgba(51, 130, 255, 0.10), transparent 55%),
+      var(--bg);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 48px 20px 32px;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { width: 100%; max-width: 880px; }
+
+  /* ── Hero ── */
+  .hero { text-align: center; margin-bottom: 40px; }
+  .logo { width: 72px; height: 72px; margin: 0 auto 22px; display: block; filter: drop-shadow(0 8px 24px rgba(135,77,255,0.28)); }
+  .badge {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-size: 12.5px; font-weight: 600; color: #7a4bff;
+    background: rgba(135, 77, 255, 0.10); border: 1px solid rgba(135, 77, 255, 0.18);
+    padding: 5px 12px; border-radius: 999px; margin-bottom: 18px;
+  }
+  .badge .dot { width: 7px; height: 7px; border-radius: 50%; background: #874dff; }
+  h1 { font-size: 40px; line-height: 1.15; letter-spacing: -0.02em; font-weight: 800; }
+  h1 .g { background: var(--grad); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+  .sub { margin-top: 14px; font-size: 16.5px; color: var(--muted); line-height: 1.6; }
+
+  /* ── Primary download ── */
+  .primary-card {
+    margin-top: 30px; background: var(--card); border: 1px solid var(--line);
+    border-radius: 24px; padding: 26px; box-shadow: 0 18px 50px rgba(62, 89, 124, 0.10);
+    display: flex; align-items: center; justify-content: space-between; gap: 20px; flex-wrap: wrap;
+  }
+  .primary-card .os-line { display: flex; align-items: center; gap: 14px; }
+  .primary-card .os-ico { width: 40px; height: 40px; color: var(--ink); flex-shrink: 0; }
+  .primary-card .os-text .k { font-size: 17px; font-weight: 700; }
+  .primary-card .os-text .s { font-size: 13px; color: var(--muted); margin-top: 2px; }
+  .btn {
+    appearance: none; border: none; cursor: pointer; text-decoration: none;
+    display: inline-flex; align-items: center; gap: 9px;
+    font-size: 15.5px; font-weight: 700; color: #fff; background: var(--grad);
+    padding: 14px 26px; border-radius: 14px; white-space: nowrap;
+    box-shadow: 0 10px 24px rgba(135, 77, 255, 0.32); transition: transform .12s ease, box-shadow .12s ease, opacity .12s ease;
+  }
+  .btn:hover { transform: translateY(-1px); box-shadow: 0 14px 30px rgba(135, 77, 255, 0.4); }
+  .btn:active { transform: translateY(0); opacity: .92; }
+  .btn svg { width: 18px; height: 18px; }
+
+  /* ── All platforms ── */
+  .all-title { margin: 38px 0 14px; font-size: 13px; font-weight: 700; color: var(--muted); letter-spacing: .04em; text-transform: uppercase; text-align: center; }
+  .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+  .tile {
+    background: var(--card); border: 1px solid var(--line); border-radius: 18px;
+    padding: 20px 18px; text-align: center; text-decoration: none; color: var(--ink);
+    transition: border-color .12s ease, transform .12s ease, box-shadow .12s ease; display: block;
+  }
+  .tile:hover { border-color: #c9b8ff; transform: translateY(-2px); box-shadow: 0 12px 28px rgba(62, 89, 124, 0.10); }
+  .tile .ico { width: 34px; height: 34px; margin: 0 auto 12px; color: var(--ink); }
+  .tile .name { font-size: 15px; font-weight: 700; }
+  .tile .arch { font-size: 12.5px; color: var(--muted); margin-top: 3px; }
+  .tile .dl { font-size: 12.5px; font-weight: 700; color: #7a4bff; margin-top: 12px; display: inline-flex; align-items: center; gap: 5px; }
+  /* 준비 중(미제공) 플랫폼 */
+  .tile.soon { cursor: default; opacity: .62; }
+  .tile.soon:hover { transform: none; border-color: var(--line); box-shadow: none; }
+  .tile.soon .dl { color: var(--muted); }
+  .tile.soon .ico { color: var(--muted); }
+  .btn.disabled { background: #c7cdd8; box-shadow: none; cursor: default; pointer-events: none; }
+
+  /* ── Notes / footer ── */
+  .notes { margin-top: 30px; font-size: 13px; color: var(--muted); text-align: center; line-height: 1.7; }
+  .notes a { color: #7a4bff; text-decoration: none; font-weight: 600; }
+  .notes a:hover { text-decoration: underline; }
+  footer { margin-top: 40px; font-size: 12.5px; color: #9aa4b2; text-align: center; }
+
+  @media (max-width: 620px) {
+    h1 { font-size: 31px; }
+    .grid { grid-template-columns: 1fr; }
+    .primary-card { flex-direction: column; align-items: stretch; text-align: center; }
+    .primary-card .os-line { justify-content: center; }
+    .btn { justify-content: center; }
+  }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <!-- ── Hero ── -->
+    <section class="hero">
+      <svg class="logo" viewBox="0 0 420 420" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <defs>
+          <linearGradient id="g1" x1="202" y1="-23" x2="219" y2="400" gradientUnits="userSpaceOnUse">
+            <stop offset="0" stop-color="#b847ff"/><stop offset=".16" stop-color="#874dff"/><stop offset="1" stop-color="#3382ff"/>
+          </linearGradient>
+          <linearGradient id="g2" x1="336" y1="425" x2="350" y2="188" gradientUnits="userSpaceOnUse">
+            <stop offset=".16" stop-color="#874dff"/><stop offset="1" stop-color="#3382ff"/>
+          </linearGradient>
+        </defs>
+        <path fill="url(#g1)" d="M341.25,0c43.49,0,78.75,35.26,78.75,78.75,0,36.13-24.33,66.58-57.51,75.85-98.07,32.89-175.04,109.91-207.93,208.03-9.32,33.1-39.73,57.36-75.81,57.36C35.26,420,0,384.74,0,341.24c0-35.7,23.75-65.85,56.31-75.51,34.09-11.31,65.65-27.95,93.72-48.95,2.49-1.93,5.15-3.96,5.15-6.06,0-2.55-1.46-4.49-3.78-6.46-1.49-1.13-3-2.25-4.51-3.35-.79-.55-1.61-1.13-2.45-1.73-.18-.13-.35-.27-.51-.4-26.58-18.96-56.12-34.09-87.86-44.59C23.63,144.45,0,114.36,0,78.75,0,35.26,35.26,0,78.75,0c36.13,0,66.57,24.33,75.85,57.5,10.79,32.16,26.34,62.04,45.81,88.85,4.06,5.19,7.45,5.53,11.5,5.04,2.88-.35,6.73-4.11,8.85-6.87,19.45-27.2,34.89-57.51,45.48-90.11l.07.07C276.54,22.86,306.22,0,341.25,0Z"/>
+        <circle fill="url(#g2)" cx="341.25" cy="341.25" r="78.75"/>
+      </svg>
+      <span class="badge"><span class="dot"></span>Desktop App</span>
+      <h1><span class="g">Keural</span> 데스크톱</h1>
+      <p class="sub">내 컴퓨터의 로컬 파일을 AI로 직접 분석하세요.<br/>읽기 · 검색 · 수정까지, 클루드 코드처럼.</p>
+    </section>
+
+    <!-- ── Detected OS primary download ── -->
+    <div class="primary-card">
+      <div class="os-line">
+        <div class="os-ico" id="primaryIcon"></div>
+        <div class="os-text">
+          <div class="k" id="primaryName">다운로드</div>
+          <div class="s" id="primaryArch">운영체제를 확인하는 중…</div>
+        </div>
+      </div>
+      <a class="btn" id="primaryBtn" href="#downloads">
+        <svg viewBox="0 0 24 24" fill="none"><path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span id="primaryLabel">다운로드</span>
+      </a>
+    </div>
+
+    <!-- ── All platforms ── -->
+    <p class="all-title" id="downloads">모든 플랫폼</p>
+    <div class="grid">
+      <a class="tile" data-os="mac" href="https://github.com/MKD-CORP/keural-desktop/releases/latest/download/Keural-mac-arm64.dmg">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M16.36 12.6c-.02-2.2 1.8-3.26 1.88-3.31-1.03-1.5-2.62-1.71-3.19-1.73-1.36-.14-2.65.8-3.34.8-.69 0-1.75-.78-2.88-.76-1.48.02-2.85.86-3.61 2.19-1.54 2.67-.39 6.62 1.11 8.79.73 1.06 1.6 2.25 2.74 2.21 1.1-.04 1.51-.71 2.84-.71 1.32 0 1.7.71 2.86.69 1.18-.02 1.93-1.08 2.65-2.15.84-1.23 1.18-2.42 1.2-2.48-.03-.01-2.29-.88-2.31-3.5zM14.2 6.18c.6-.73 1.01-1.74.9-2.75-.87.04-1.93.58-2.55 1.3-.56.65-1.05 1.69-.92 2.68.97.08 1.96-.5 2.57-1.23z"/></svg></div>
+        <div class="name">macOS</div>
+        <div class="arch">Apple Silicon (M1+)</div>
+        <span class="dl">.dmg 다운로드 →</span>
+      </a>
+      <a class="tile" data-os="mac" href="https://github.com/MKD-CORP/keural-desktop/releases/latest/download/Keural-mac-x64.dmg">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M16.36 12.6c-.02-2.2 1.8-3.26 1.88-3.31-1.03-1.5-2.62-1.71-3.19-1.73-1.36-.14-2.65.8-3.34.8-.69 0-1.75-.78-2.88-.76-1.48.02-2.85.86-3.61 2.19-1.54 2.67-.39 6.62 1.11 8.79.73 1.06 1.6 2.25 2.74 2.21 1.1-.04 1.51-.71 2.84-.71 1.32 0 1.7.71 2.86.69 1.18-.02 1.93-1.08 2.65-2.15.84-1.23 1.18-2.42 1.2-2.48-.03-.01-2.29-.88-2.31-3.5zM14.2 6.18c.6-.73 1.01-1.74.9-2.75-.87.04-1.93.58-2.55 1.3-.56.65-1.05 1.69-.92 2.68.97.08 1.96-.5 2.57-1.23z"/></svg></div>
+        <div class="name">macOS</div>
+        <div class="arch">Intel (x64)</div>
+        <span class="dl">.dmg 다운로드 →</span>
+      </a>
+      <a class="tile" data-os="win" href="https://github.com/MKD-CORP/keural-desktop/releases/latest/download/Keural-win-x64.exe">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M3 5.7l7.5-1.03v7.05H3V5.7zm0 12.6l7.5 1.03v-6.96H3v5.93zm8.4 1.16L21 20.8v-8.42h-9.6v6.96zM21 3.2l-9.6 1.32v7.08H21V3.2z"/></svg></div>
+        <div class="name">Windows</div>
+        <div class="arch">64-bit (.exe)</div>
+        <span class="dl">설치 파일 →</span>
+      </a>
+    </div>
+    <div class="grid" style="grid-template-columns: 1fr; margin-top: 14px;">
+      <a class="tile" data-os="linux" href="https://github.com/MKD-CORP/keural-desktop/releases/latest/download/Keural-linux-x86_64.AppImage">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2c-1.5 0-2.5 1.3-2.5 3 0 .9.3 1.6.3 2.4 0 1-1.3 1.8-2.2 3.2C6.6 12 6 13.6 6 15c0 .8-.6 1.3-1 1.9-.4.6-.6 1.2-.2 1.8.3.5 1 .6 1.7.6.5.6 1.3 1 2.2 1.1.6.5 1.4.8 2.3.8s1.7-.3 2.3-.8c.9-.1 1.7-.5 2.2-1.1.7 0 1.4-.1 1.7-.6.4-.6.2-1.2-.2-1.8-.4-.6-1-1.1-1-1.9 0-1.4-.6-3-1.6-4.4-.9-1.4-2.2-2.2-2.2-3.2 0-.8.3-1.5.3-2.4 0-1.7-1-3-2.5-3z"/></svg></div>
+        <div class="name">Linux</div>
+        <div class="arch">x86_64 (.AppImage)</div>
+        <span class="dl">.AppImage 다운로드 →</span>
+      </a>
+    </div>
+
+    <p class="notes">
+      macOS는 최초 실행 시 <b>시스템 설정 → 개인정보 보호 및 보안</b>에서 실행 허용이 필요할 수 있어요.<br/>
+      이전 버전이나 전체 릴리스 목록은 <a href="https://github.com/MKD-CORP/keural-desktop/releases" target="_blank" rel="noopener">GitHub Releases</a>에서 확인하세요.
+    </p>
+
+    <footer>© MKD · Keural Desktop</footer>
+  </div>
+
+  <script>
+    (function () {
+      var FILES = {
+        mac:   { href: 'https://github.com/MKD-CORP/keural-desktop/releases/latest/download/Keural-mac-arm64.dmg', name: 'macOS', arch: 'Apple Silicon (M1 이상)', label: 'macOS용 다운로드' },
+        win:   { href: 'https://github.com/MKD-CORP/keural-desktop/releases/latest/download/Keural-win-x64.exe',   name: 'Windows', arch: '64-bit 설치 파일', label: 'Windows용 다운로드' },
+        linux: { href: 'https://github.com/MKD-CORP/keural-desktop/releases/latest/download/Keural-linux-x86_64.AppImage', name: 'Linux', arch: 'x86_64 AppImage', label: 'Linux용 다운로드' }
+      };
+      var APPLE = '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M16.36 12.6c-.02-2.2 1.8-3.26 1.88-3.31-1.03-1.5-2.62-1.71-3.19-1.73-1.36-.14-2.65.8-3.34.8-.69 0-1.75-.78-2.88-.76-1.48.02-2.85.86-3.61 2.19-1.54 2.67-.39 6.62 1.11 8.79.73 1.06 1.6 2.25 2.74 2.21 1.1-.04 1.51-.71 2.84-.71 1.32 0 1.7.71 2.86.69 1.18-.02 1.93-1.08 2.65-2.15.84-1.23 1.18-2.42 1.2-2.48-.03-.01-2.29-.88-2.31-3.5zM14.2 6.18c.6-.73 1.01-1.74.9-2.75-.87.04-1.93.58-2.55 1.3-.56.65-1.05 1.69-.92 2.68.97.08 1.96-.5 2.57-1.23z"/></svg>';
+      var WIN = '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M3 5.7l7.5-1.03v7.05H3V5.7zm0 12.6l7.5 1.03v-6.96H3v5.93zm8.4 1.16L21 20.8v-8.42h-9.6v6.96zM21 3.2l-9.6 1.32v7.08H21V3.2z"/></svg>';
+      var TUX = '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2c-1.5 0-2.5 1.3-2.5 3 0 .9.3 1.6.3 2.4 0 1-1.3 1.8-2.2 3.2C6.6 12 6 13.6 6 15c0 .8-.6 1.3-1 1.9-.4.6-.6 1.2-.2 1.8.3.5 1 .6 1.7.6.5.6 1.3 1 2.2 1.1.6.5 1.4.8 2.3.8s1.7-.3 2.3-.8c.9-.1 1.7-.5 2.2-1.1.7 0 1.4-.1 1.7-.6.4-.6.2-1.2-.2-1.8-.4-.6-1-1.1-1-1.9 0-1.4-.6-3-1.6-4.4-.9-1.4-2.2-2.2-2.2-3.2 0-.8.3-1.5.3-2.4 0-1.7-1-3-2.5-3z"/></svg>';
+      var ICONS = { mac: APPLE, win: WIN, linux: TUX };
+
+      // 제공 여부 — 빌드가 Release에 올라오면 해당 플랫폼을 true로.
+      var AVAILABLE = { mac: true, win: false, linux: false };
+
+      // 미제공 플랫폼 타일을 "준비 중"으로 비활성화
+      var tiles = document.querySelectorAll('.tile[data-os]');
+      for (var i = 0; i < tiles.length; i++) {
+        var el = tiles[i];
+        if (!AVAILABLE[el.getAttribute('data-os')]) {
+          el.classList.add('soon');
+          el.removeAttribute('href');
+          var dl = el.querySelector('.dl');
+          if (dl) dl.textContent = '준비 중';
+        }
+      }
+
+      var ua = navigator.userAgent || '';
+      var p = (navigator.platform || '') + ' ' + ua;
+      var os = 'mac';
+      if (/Win/i.test(p)) os = 'win';
+      else if (/Mac|iPhone|iPad/i.test(p)) os = 'mac';
+      else if (/Linux|X11/i.test(p)) os = 'linux';
+
+      var f = FILES[os];
+      document.getElementById('primaryIcon').innerHTML = ICONS[os];
+      document.getElementById('primaryName').textContent = f.name;
+      var btn = document.getElementById('primaryBtn');
+      if (AVAILABLE[os]) {
+        document.getElementById('primaryArch').textContent = f.arch;
+        document.getElementById('primaryLabel').textContent = f.label;
+        btn.setAttribute('href', f.href);
+      } else {
+        // 아직 미제공 OS로 접속 → 준비 중 안내 (다른 플랫폼은 아래 목록에서 받을 수 있음)
+        document.getElementById('primaryArch').textContent = f.name + ' 버전은 준비 중이에요 — 곧 제공됩니다';
+        document.getElementById('primaryLabel').textContent = '준비 중';
+        btn.classList.add('disabled');
+        btn.removeAttribute('href');
+      }
+    })();
+  </script>
+</body>
+</html>
