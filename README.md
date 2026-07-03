@@ -1,12 +1,6 @@
 <div align="center">
-<iframe 
-  src="https://mkd-corp.github.io/keural-desktop/" 
-  width="100%" 
-  height="600px"
-  frameborder="0">
-</iframe>
 <img src="assets/logo.svg" width="92" alt="Keural" />
-<ifram
+
 # Keural Desktop
 
 ### 내 컴퓨터의 파일을, AI 와 함께.
