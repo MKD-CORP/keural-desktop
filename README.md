@@ -23,9 +23,9 @@
 
 | 플랫폼 | 아키텍처 | 다운로드 |
 |---|---|---|
-| 🍎 **macOS** | Apple Silicon (M1 이상) | [Keural-1.0.0-arm64.dmg](https://github.com/MKD-CORP/keural-desktop/releases/latest/download/Keural-1.0.0-arm64.dmg) |
-| 🍎 **macOS** | Intel | [Keural-1.0.0-x64.dmg](https://github.com/MKD-CORP/keural-desktop/releases/latest/download/Keural-1.0.0-x64.dmg) |
-| 🪟 **Windows** | 64-bit | [Keural-Setup-1.0.0.exe](https://github.com/MKD-CORP/keural-desktop/releases/latest/download/Keural-Setup-1.0.0.exe) |
+| 🍎 **macOS** | Apple Silicon (M1 이상) | [Keural-1.0.1-arm64.dmg](https://github.com/MKD-CORP/keural-desktop/releases/latest/download/Keural-1.0.1-arm64.dmg) |
+| 🍎 **macOS** | Intel | [Keural-1.0.1-x64.dmg](https://github.com/MKD-CORP/keural-desktop/releases/latest/download/Keural-1.0.1-x64.dmg) |
+| 🪟 **Windows** | 64-bit | [Keural-Setup-1.0.1.exe](https://github.com/MKD-CORP/keural-desktop/releases/latest/download/Keural-Setup-1.0.1.exe) |
 | 🐧 **Linux** | x86_64 | _준비 중_ |
 
 ## 설치
